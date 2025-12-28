@@ -1,20 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Maher</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f4f4f4; color: #333; }
-        header { background: #4CAF50; color: #fff; padding: 20px 0; text-align: center; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        section { padding: 50px 20px; max-width: 900px; margin: auto; background: #fff; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h2 { color: #4CAF50; }
-        .project { margin-bottom: 20px; }
-        .project a { color: #4CAF50; text-decoration: none; }
-        footer { text-align: center; padding: 20px; background: #333; color: #fff; }
-        @media(max-width:600px){ nav a { display: block; margin: 10px 0; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Maher</title>
+<style>
+    /* عام */
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: #4CAF50; }
+    header { background: #4CAF50; color: white; text-align: center; padding: 20px 0; }
+    nav a { margin: 0 15px; font-weight: bold; color: white; }
+    nav a:hover { text-decoration: underline; }
+    section { max-width: 1000px; margin: 40px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); }
+    h2 { color: #4CAF50; margin-bottom: 20px; }
+
+    /* About */
+    #about p { margin-bottom: 10px; }
+
+    /* Projects */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .project-card { background: #f9f9f9; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-image { width: 100%; height: 180px; object-fit: cover; }
+    .project-content { padding: 15px; }
+    .project-content h3 { margin-top: 0; color: #4CAF50; }
+    .project-content p { margin: 5px 0; font-size: 0.95rem; }
+
+    /* Contact */
+    #contact p { margin-bottom: 10px; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 20px; }
+
+    @media(max-width:600px){ nav a { display: block; margin: 10px 0; } }
+</style>
 </head>
 <body>
 
@@ -35,34 +55,45 @@
 
 <section id="projects">
     <h2>المشاريع</h2>
+    <div class="projects-grid">
 
-    <div class="project">
-        <h3>نظام إدارة المخازن والمبيعات</h3>
-        <p>نظام متكامل لإدارة المخازن والمبيعات، يشمل إدارة المنتجات والعملاء والفواتير.</p>
-        <p>التقنيات: Laravel, PHP, MySQL, JavaScript</p>
-        <p><a href="#">رابط المشروع</a></p>
+        <div class="project-card">
+            <img src="https://via.placeholder.com/400x180?text=Warehouse+System" alt="نظام إدارة المخازن والمبيعات" class="project-image">
+            <div class="project-content">
+                <h3>نظام إدارة المخازن والمبيعات</h3>
+                <p>نظام متكامل لإدارة المخازن والمبيعات، يشمل إدارة المنتجات والعملاء والفواتير.</p>
+                <p>التقنيات: Laravel, PHP, MySQL, JavaScript</p>
+                <p><a href="#">رابط المشروع</a></p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://via.placeholder.com/400x180?text=HR+System" alt="نظام شؤون الموظفين" class="project-image">
+            <div class="project-content">
+                <h3>نظام شؤون الموظفين</h3>
+                <p>نظام لإدارة الموظفين، الرواتب، الإجازات، والحضور.</p>
+                <p>التقنيات: Laravel, PHP, MySQL</p>
+                <p><a href="#">رابط المشروع</a></p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://via.placeholder.com/400x180?text=Android+App" alt="تطبيق أندرويد لإدارة المستودعات" class="project-image">
+            <div class="project-content">
+                <h3>تطبيق أندرويد لإدارة المستودعات</h3>
+                <p>تطبيق جوال يتيح إدارة المخازن وتتبع الفواتير وحركات المخزون بشكل مباشر.</p>
+                <p>التقنيات: Android, Java, Firebase</p>
+                <p><a href="#">رابط المشروع</a></p>
+            </div>
+        </div>
+
     </div>
-
-    <div class="project">
-        <h3>نظام شؤون الموظفين</h3>
-        <p>نظام لإدارة الموظفين، الرواتب، الإجازات، والحضور.</p>
-        <p>التقنيات: Laravel, PHP, MySQL</p>
-        <p><a href="#">رابط المشروع</a></p>
-    </div>
-
-    <div class="project">
-        <h3>تطبيق أندرويد لإدارة المستودعات</h3>
-        <p>تطبيق جوال يتيح إدارة المخازن وتتبع الفواتير وحركات المخزون بشكل مباشر.</p>
-        <p>التقنيات: Android, Java, Firebase</p>
-        <p><a href="#">رابط المشروع</a></p>
-    </div>
-
 </section>
 
 <section id="contact">
     <h2>تواصل معي</h2>
     <p>البريد الإلكتروني: <a href="mailto:maheralyamany4@gmail.com">maheralyamany4@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/maheralyamany" target="_blank">github.com/maheralyamany</a></p>
+    <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/maheralyamany" target="_blank">linkedin.com/in/maheralyamany</a></p>
 </section>
 
